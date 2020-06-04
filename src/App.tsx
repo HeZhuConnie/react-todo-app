@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import InputField from './InputField';
+import Filters from './Filters';
+import Result from './Result';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component<any, any> {
+    state={items: [], viewMode:'All'}
+
+    addItem = (item: any) => {
+        this.setState({items: [...this.state.items, item]});
+        console.log(this.state.items)
+    }
+
+    handleStatusChange = (updateItem: any) => {
+        this.setState({
+            items: this.state.items.map((item: any) => {
+                if (updateItem.message === item.message) {
+                    return {message: item.message, status: !item.status}
+                }else{
+                    return  item
+                }
+            })
+        })
+    }
+
+    handleViewModeChange=(mode:any)=>{
+        this.setState({viewMode:mode});
+    }
+
+    render() {
+        const itemsShown = this.state.items.filter((item:any) => this.state.viewMode==='All' || (this.state.viewMode==='Finished' && item.status) || (this.state.viewMode==='Un Finished' && !item.status))
+        return (
+            <div className="App">
+                <InputField addItem={this.addItem}/>
+                <Filters handleModeChange = {this.handleViewModeChange}/>
+                <Result items={itemsShown} handleStatusChange={this.handleStatusChange}/>
+            </div>
+        );
+    }
 }
 
 export default App;
