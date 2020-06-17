@@ -7,18 +7,18 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="854f16a2-3b73-4f1f-9c44-40afaf627632" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,8 @@
       <workItem from="1591249284778" duration="12329000" />
       <workItem from="1591338246550" duration="39000" />
       <workItem from="1591345371908" duration="1464000" />
-      <workItem from="1592400662812" duration="2629000" />
+      <workItem from="1592400662812" duration="2803000" />
+      <workItem from="1592404282704" duration="584000" />
     </task>
     <servers />
   </component>
@@ -85,7 +86,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -114,5 +127,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1591257195312" />
+    <state x="440" y="237" key="Vcs.Push.Dialog.v2" timestamp="1592404480901">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state x="440" y="237" key="Vcs.Push.Dialog.v2/0.23.1680.949@0.23.1680.949" timestamp="1592404480901" />
   </component>
 </project>
