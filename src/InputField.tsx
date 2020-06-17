@@ -1,29 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {addItem} from "./store";
 
-class InputField extends React.Component<any,any>{
-    constructor(props:any) {
-        super(props);
-        this.state = {items : ''};
+function InputField(props: any) {
+    const [item, setItem] = useState("");
+    const dispatch=useDispatch();
+
+    function handleChange(event: any) {
+        const msg = event.target.value;
+        setItem(msg);
     }
 
-    handleChange=(event:any)=>{
-        this.setState({items: event.target.value});
+    function handleOnClick() {
+        dispatch(addItem({message: item, status: false}))
+        setItem("")
     }
 
-    handleOnClick=()=>{
-        console.log(this.state.items);
-        this.props.addItem({message:this.state.items,status:false})
-        this.setState({items:''})
-    }
-
-    render(){
-        return (
-            <div className="InputField">
-                <input type = "text" value={this.state.items} onChange={this.handleChange}/>
-                <button onClick={this.handleOnClick}>提交</button>
-            </div>
-        );
-    }
+    return (
+        <div className="InputField">
+            <input type="text" value={item} onChange={handleChange}/>
+            <button onClick={handleOnClick}>提交</button>
+        </div>
+    );
 }
+
 
 export default InputField;

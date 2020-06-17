@@ -1,21 +1,28 @@
 import React from "react";
+import {connect, useSelector, useDispatch} from "react-redux";
+import {changeViewModeActionCreator} from "./store";
 
-class Filters extends React.Component<any, any> {
+function Filters() {
+    const viewMode = useSelector((state: any) => state.viewMode);
+    const dispatch = useDispatch();
 
-    shouldComponentUpdate(nextProps: Readonly<any>, nextState: Readonly<any>, nextContext: any): boolean {
-        return false;
-    }
-    render(): React.ReactNode {
-        return (
-            <div className="Filters">
-                <button onClick={()=>{this.props.handleModeChange('All')}}>All</button>
-                <button onClick={()=>{this.props.handleModeChange('Finished')}}>Finished</button>
-                <button onClick={()=>{this.props.handleModeChange('Un Finished')}}>Un Finished</button>
-            </div>
-        );
-    }
-
-
+    return (
+        <div className="Filters">
+            <button className={viewMode === "All" ? "highlighted-button" : ""} onClick={() => {
+                dispatch(changeViewModeActionCreator('All'))
+            }}>All
+            </button>
+            <button className={viewMode === "Finished" ? "highlighted-button" : ""} onClick={() => {
+                dispatch(changeViewModeActionCreator('Finished'))
+            }}>Finished
+            </button>
+            <button className={viewMode === "Un Finished" ? "highlighted-button" : ""} onClick={() => {
+                dispatch(changeViewModeActionCreator('Un Finished'))
+            }}>Un Finished
+            </button>
+        </div>
+    );
 }
 
-export default Filters;
+
+export default connect()(Filters);

@@ -1,38 +1,30 @@
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {updateStatus} from "./store";
 
-class Result extends React.Component<any, any> {
-    constructor(props: any) {
-        super(props);
-    }
+function Result() {
+    const items = useSelector((state:any)=>state.items.filter((item: any) => state.viewMode === 'All' || (state.viewMode === 'Finished' && item.status) || (state.viewMode === 'Un Finished' && !item.status)));
+    const dispatch = useDispatch();
 
-    render() {
-        return (
-            <div className="Result">
-                {this.props.items.map((item: any) =>
-                    <div key={item.message}>
-                        <ItemComponent ponent item={item} handleStatusChange={this.props.handleStatusChange}/>
-                    </div>)}
-            </div>
-        );
-    }
-
-
+    return (
+        <div className="Result">
+            {items.map((item: any) =>
+                <div key={item.message}>
+                    <ItemComponent item={item} updateStatus={()=>dispatch(updateStatus(item))}/>
+                </div>)}
+        </div>
+    );
 }
 
-class ItemComponent extends React.Component<any, any>{
-    constructor(props:any) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div>
-                <input type="radio" checked={this.props.item.status} onClick={()=>{this.props.handleStatusChange(this.props.item)}}/>
-                <span>{this.props.item.message}</span>
-            </div>
-        );
-    }
-
+function ItemComponent(props: any) {
+    return (
+        <div>
+            <input type="radio" checked={props.item.status} onClick={() => {
+                props.updateStatus(props.item)
+            }}/>
+            <span>{props.item.message}</span>
+        </div>
+    )
 
 }
 
