@@ -16,9 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="854f16a2-3b73-4f1f-9c44-40afaf627632" name="Default Changelist" comment="">
+    <list default="true" id="854f16a2-3b73-4f1f-9c44-40afaf627632" name="Default Changelist" comment="add ReadMe file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Result.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Result.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +80,17 @@
       <workItem from="1591338246550" duration="39000" />
       <workItem from="1591345371908" duration="1464000" />
       <workItem from="1592400662812" duration="2803000" />
-      <workItem from="1592404282704" duration="584000" />
+      <workItem from="1592404282704" duration="4764000" />
+      <workItem from="1592486986394" duration="853000" />
     </task>
+    <task id="LOCAL-00001" summary="add ReadMe file">
+      <created>1592404908726</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592404908726</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +120,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add ReadMe file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ReadMe file" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="328" y="106" key="#Project_Structure" timestamp="1591251243163">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -127,9 +146,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1591257195312" />
-    <state x="440" y="237" key="Vcs.Push.Dialog.v2" timestamp="1592404480901">
+    <state x="440" y="237" key="Vcs.Push.Dialog.v2" timestamp="1592404917671">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
-    <state x="440" y="237" key="Vcs.Push.Dialog.v2/0.23.1680.949@0.23.1680.949" timestamp="1592404480901" />
+    <state x="440" y="237" key="Vcs.Push.Dialog.v2/0.23.1680.949@0.23.1680.949" timestamp="1592404917671" />
+    <state x="925" y="232" width="670" height="58" key="search.everywhere.popup" timestamp="1592458631636">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state x="925" y="232" width="670" height="58" key="search.everywhere.popup/-1920.-127.1920.1177/0.23.1680.949@0.23.1680.949" timestamp="1592458631636" />
   </component>
 </project>

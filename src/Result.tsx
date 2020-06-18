@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {updateStatus} from "./store";
+import {Radio} from "@material-ui/core";
 
 function Result() {
     const items = useSelector((state:any)=>state.items.filter((item: any) => state.viewMode === 'All' || (state.viewMode === 'Finished' && item.status) || (state.viewMode === 'Un Finished' && !item.status)));
@@ -19,7 +20,7 @@ function Result() {
 function ItemComponent(props: any) {
     return (
         <div>
-            <input type="radio" checked={props.item.status} onClick={() => {
+            <Radio checked={props.item.status} onClick={() => {
                 props.updateStatus(props.item)
             }}/>
             <span>{props.item.message}</span>
