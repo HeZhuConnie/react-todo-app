@@ -1,27 +1,37 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {addItem} from "./store";
-import { Button, Input} from '@material-ui/core';
+import {Button, Input} from '@material-ui/core';
+import TodoApi from "./api/todo";
 
-function InputField(props: any) {
-    const [item, setItem] = useState("");
+function InputField() {
+    const [itemMsg, setItemMsg] = useState("");
     const dispatch = useDispatch();
 
     function handleChange(event: any) {
         const msg = event.target.value;
-        setItem(msg);
+        setItemMsg(msg);
     }
 
     function handleOnClick() {
-        dispatch(addItem({message: item, status: false}))
-        setItem("")
+        dispatch(addItem({message: itemMsg, status: false}))
+    }
+
+    // handle API call
+    function handleOnSubmit(event: any) {
+        event.preventDefault()
+        console.log("itemMsg: " + itemMsg)
+        TodoApi.createTodo(itemMsg)
+        setItemMsg("")
     }
 
     return (
-        <div className="InputField">
-            <Input type="text" value={item} onChange={handleChange}/>
-            <Button onClick={handleOnClick}>提交</Button>
-        </div>
+        <form onSubmit={handleOnSubmit}>
+            <div className="InputField">
+                <Input type="text" value={itemMsg} onChange={handleChange}/>
+                <Button type="submit" onClick={handleOnClick}>提交</Button>
+            </div>
+        </form>
     );
 }
 

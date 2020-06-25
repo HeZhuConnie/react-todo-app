@@ -8,7 +8,7 @@ function Result() {
     const dispatch = useDispatch();
 
     return (
-        <div className="Result">
+        <div className="Result" key={items.length}>
             {items.map((item: any) =>
                 <div key={item.message}>
                     <ItemComponent item={item} updateStatus={()=>dispatch(updateStatus(item))}/>
