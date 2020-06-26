@@ -7,12 +7,12 @@ am="$GIT_AUTHOR_EMAIL"
 cn="$GIT_COMMITTER_NAME"
 cm="$GIT_COMMITTER_EMAIL"
 
-if [ "$GIT_COMMITTER_EMIAL" = he.zhu@thgoughtworks.com ]
+if [ "$GIT_COMMITTER_EMAIL" = "he.zhu@thgoughtworks.com" ]
 then
     cn="HeZhuConnie"
     cm="32558396+HeZhuConnie@users.noreply.github.com"
 fi
-if [ "$GIT_AUTHOR_EMAIL" = he.zhu@thgoughtworks.com ]
+if [ "$GIT_AUTHOR_EMAIL" = "he.zhu@thgoughtworks.com" ]
 then
     an="HeZhuConnie"
     am="32558396+HeZhuConnie@users.noreply.github.com"
