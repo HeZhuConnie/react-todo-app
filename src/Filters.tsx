@@ -13,10 +13,12 @@ function Filters() {
                 dispatch(changeViewModeActionCreator('All'))
             }}>All
             </Button>
+
             <Button className={viewMode === "Finished" ? "highlighted-button" : ""} onClick={() => {
                 dispatch(changeViewModeActionCreator('Finished'))
             }}>Completed
             </Button>
+
             <Button className={viewMode === "Un Finished" ? "highlighted-button" : ""} onClick={() => {
                 dispatch(changeViewModeActionCreator('Un Finished'))
             }}>Not Completed

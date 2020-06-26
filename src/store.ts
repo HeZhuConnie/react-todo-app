@@ -9,6 +9,16 @@ function todoReducer(state = defaultState, action: any) {
             return {...state, viewMode: action.viewMode};
         case 'add_item':
             return {...state, items: [...state.items, action.item]};
+        case 'delete_item':
+            return {
+                ...state,
+                items: state.items.map((item: any) => {
+                    if (item.message === action.item.message) {
+                    } else {
+                        return item
+                    }
+                })
+            }
         case 'change_status':
             return {
                 ...state,
@@ -35,6 +45,14 @@ export function changeViewModeActionCreator(viewMode: string) {
 export function addItem(item: any) {
     return {
         type: "add_item",
+        item
+    }
+}
+
+
+export function deleteItem(item: any) {
+    return {
+        type: "delete_item",
         item
     }
 }

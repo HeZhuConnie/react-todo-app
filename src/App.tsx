@@ -3,14 +3,15 @@ import './App.css';
 import InputField from './InputField';
 import Filters from './Filters';
 import Result from './Result';
+import {Box} from "@material-ui/core";
 
 function App () {
         return (
-            <div className="App">
+            <Box className="App">
                 <InputField />
                 <Filters/>
                 <Result/>
-            </div>
+            </Box>
         );
 }
 

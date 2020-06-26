@@ -20,7 +20,7 @@ function InputField() {
     // handle API call
     function handleOnSubmit(event: any) {
         event.preventDefault()
-        console.log("itemMsg: " + itemMsg)
+
         TodoApi.createTodo(itemMsg)
         setItemMsg("")
     }
